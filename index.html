@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArguNet - Debate Platform</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="setupPage" class="page active">
+        <div class="setup-container">
+            <div class="logo">ArguNet</div>
+            
+            <div class="players-setup">
+                <div class="player-setup for-side">
+                    <div class="side-label">FOR</div>
+                    <input type="text" id="player1Name" placeholder="Enter Player 1 Name" maxlength="30">
+                </div>
+                
+                <div class="player-setup against-side">
+                    <div class="side-label">AGAINST</div>
+                    <input type="text" id="player2Name" placeholder="Enter Player 2 Name" maxlength="30">
+                </div>
+            </div>
+            
+            <div class="debate-config">
+                <input type="text" id="debateTopic" placeholder="Enter Debate Topic" maxlength="150">
+                <input type="number" id="winThreshold" placeholder="Winning Score Threshold" min="2" step="2" value="20">
+                <button id="startDebate" class="start-btn">Start Debate</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="debatePage" class="page">
+        <div class="debate-header">
+            <div class="player-info left">
+                <div class="player-name" id="player1NameDisplay"></div>
+                <div class="player-score" id="player1ScoreDisplay">0</div>
+                <button class="end-debate-btn" id="endDebateBtn1">End Debate</button>
+            </div>
+            
+            <div class="topic-display">
+                <div class="topic-label">TOPIC</div>
+                <div id="topicDisplay"></div>
+            </div>
+            
+            <div class="player-info right">
+                <div class="player-name" id="player2NameDisplay"></div>
+                <div class="player-score" id="player2ScoreDisplay">0</div>
+                <button class="end-debate-btn" id="endDebateBtn2">End Debate</button>
+            </div>
+        </div>
+        
+        <div class="turn-indicator" id="turnIndicator"></div>
+        
+        <div class="chat-container" id="chatContainer"></div>
+        
+        <div class="message-input-container">
+            <input type="text" id="messageInput" placeholder="Type your argument...">
+            <button id="sendBtn" class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <div id="endPage" class="page">
+        <div class="end-container">
+            <div class="end-title">DEBATE ENDED</div>
+            <div class="winner-announcement" id="winnerAnnouncement"></div>
+            <div class="final-scores" id="finalScores"></div>
+            <button id="newDebateBtn" class="new-debate-btn">New Debate</button>
+        </div>
+    </div>
+
+    <script src="./index2.js"></script>
+</body>
+</html>
